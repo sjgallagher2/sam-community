@@ -60,6 +60,12 @@ mod.setting(
     desc="When enabled, pop stops continuous scroll modes (wheel upper/downer/gaze)",
 )
 mod.setting(
+    "mouse_continuous_scroll_pop_toggles",
+    type=bool,
+    default=False,
+    desc="When enabled, pop toggles hiss scroll direction",
+)
+mod.setting(
     "mouse_enable_hiss_scroll",
     type=bool,
     default=False,
@@ -238,6 +244,11 @@ class Actions:
         """Change mouse hiss scroll direction to down"""
         global hiss_scroll_up
         hiss_scroll_up = False
+    
+    def hiss_scroll_toggle():
+        """Toggle mouse hiss scroll direction"""
+        global hiss_scroll_up 
+        hiss_scroll_up = ~hiss_scroll_up
 
 
 def show_cursor_helper(show):
@@ -283,6 +294,10 @@ class UserActions:
         ):
             # Allow pop to stop scroll
             stop_scroll()
+        elif settings.get("user.mouse_continuous_scroll_pop_toggles"):
+            # Change hiss scroll direction
+            actions.user.hiss_scroll_toggle()
+            print("Scroll direction toggle")
         else:
             # Otherwise respect the mouse_enable_pop_click setting
             setting_val = settings.get("user.mouse_enable_pop_click")

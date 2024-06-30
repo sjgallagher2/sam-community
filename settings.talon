@@ -19,10 +19,13 @@ settings():
     user.help_max_contexts_per_page = 20
 
     # Set the scroll amount for continuous scroll/gaze scroll
-    user.mouse_continuous_scroll_amount = 80
+    user.mouse_continuous_scroll_amount = 300
 
     # If `true`, stop continuous scroll/gaze scroll with a pop
-    user.mouse_enable_pop_stops_scroll = true
+    user.mouse_enable_pop_stops_scroll = false
+
+    # If `true`, toggle hiss scroll direction
+    user.mouse_continuous_scroll_pop_toggles = true
 
     # Choose how pop click should work in 'control mouse' mode
     # 0 = off
@@ -31,7 +34,7 @@ settings():
     user.mouse_enable_pop_click = 1
 
     # If `true`, use a hissing noise to scroll continuously
-    user.mouse_enable_hiss_scroll = false
+    user.mouse_enable_hiss_scroll = true
 
     # If `true`, hide the continuous scroll/gaze scroll GUI
     user.mouse_hide_mouse_gui = false
@@ -40,7 +43,7 @@ settings():
     user.mouse_wake_hides_cursor = false
 
     # Set the amount to scroll up/down
-    user.mouse_wheel_down_amount = 120
+    user.mouse_wheel_down_amount = 200
 
     # Set the amount to scroll left/right
     user.mouse_wheel_horizontal_amount = 40

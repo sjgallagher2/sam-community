@@ -65,7 +65,7 @@ def update_title():
                 update_active_contexts_cache(registry.active_contexts())
 
 
-@imgui.open(y=0)
+@imgui.open(x=100,y=100)
 def gui_formatters(gui: imgui.GUI):
     global formatters_words
     gui.text("formatters help")
@@ -174,7 +174,7 @@ def get_pages(item_line_counts: list[int]) -> list[int]:
     return pages
 
 
-@imgui.open(y=0)
+@imgui.open(x=100,y=100)
 def gui_context_help(gui: imgui.GUI):
     global context_command_map
     global current_context_page
@@ -497,7 +497,7 @@ def draw_list_commands(gui: imgui.GUI):
     return pages_list
 
 
-@imgui.open(y=0)
+@imgui.open(x=100,y=100)
 def gui_list_help(gui: imgui.GUI):
     global total_page_count
     global current_list_page
