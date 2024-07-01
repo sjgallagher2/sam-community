@@ -435,3 +435,13 @@ wnd,wind
 win,window
 ntoskrnl,windows kernel
 wip,work in progress
+ga,ground assembly
+va,vehicle assembly
+rx,receive
+tx,transmit
+m,meter
+s,second
+Hz,hurts
+kHz,kilohertz
+MHz,megahertz
+GHz,gigahertz
