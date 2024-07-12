@@ -459,3 +459,6 @@ cpu,computer
 gpu,graphics processor
 PSP,PlayStation portable
 RAM,random access memory
+np,numpy
+mpl,matplotlib
+plt,plot
